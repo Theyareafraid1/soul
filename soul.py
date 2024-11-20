@@ -16,11 +16,12 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '7'
+ADMIN = 5755964345
+TOKEN = '7756760436:AAEpTAHmPl0k04ekOkTTdO-oKl0iqdjrcdE'
 MONGO_URI = 'mongodb+srv://Bishal:Bishal@bishal.dffybpx.mongodb.net/?retryWrites=true&w=majority&appName=Bishal'
-FORWARD_CHANNEL_ID = -1002241427670
-CHANNEL_ID = -1002241427670
-error_channel_id = -1002241427670
+FORWARD_CHANNEL_ID = -1002464521297
+CHANNEL_ID = -1002464521297
+error_channel_id = -1002464521297
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -170,7 +171,7 @@ def handle_attack_command(message):
         if not user_data or user_data['plan'] == 0:
             bot.send_message(chat_id, "*🚫 Access Denied!*\n"  # Access Denied message
                                        "*You need to be approved to use this bot.*\n"  # Need approval message
-                                       "*Contact the owner for assistance: @TANISHULTRA54.*", parse_mode='Markdown')  # Contact owner message
+                                       "*Contact the owner for assistance: @CRACKER_PRO_M.*", parse_mode='Markdown')  # Contact owner message
             return
 
         # Check plan limits
@@ -268,11 +269,11 @@ def myinfo_command(message):
     if not user_data:
         # User not found in the database
         response = "*❌ Oops! No account information found!* \n"  # Account not found message
-        response += "*For assistance, please contact the owner: @RAVENxKUNAL* "  # Contact owner message
+        response += "*For assistance, please contact the owner: @CRACKER_PRO_M* "  # Contact owner message
     elif user_data.get('plan', 0) == 0:
         # User found but not approved
         response = "*🔒 Your account is still pending approval!* \n"  # Not approved message
-        response += "*Please reach out to the owner for assistance: @RAVENxKUNAL* 🙏"  # Contact owner message
+        response += "*Please reach out to the owner for assistance: @CRACKER_PRO_M* 🙏"  # Contact owner message
     else:
         # User found and approved
         username = message.from_user.username or "Unknown User"  # Default username if none provided
@@ -333,7 +334,7 @@ def owner_command(message):
     response = (
         "*👤 **Owner Information:**\n\n"
         "For any inquiries, support, or collaboration opportunities, don't hesitate to reach out to the owner:\n\n"
-        "📩 **Telegram:** @TANISHULTRA54\n\n"
+        "📩 **Telegram:** @CRACKER_PRO_M\n\n"
         "💬 **We value your feedback!** Your thoughts and suggestions are crucial for improving our service and enhancing your experience.\n\n"
         "🌟 **Thank you for being a part of our community!** Your support means the world to us, and we’re always here to help!*\n"
     )
